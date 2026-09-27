@@ -1,0 +1,13 @@
+{
+  "id": "nanummyeongjo-hanji",
+  "name": "나눔명조(한지)",
+  "version": "1.0.0",
+  "description": "나눔명조 · 한지 바탕에 붉은 갈색. 모서리를 모두 각지게 둔 손편지의 결.",
+  "css": "theme.css",
+  "snippets": [],
+  "supportsDark": true,
+  "author": "Dotorix",
+  "fonts": [
+    "nanum-myeongjo"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "dongle-satang",
+  "name": "동글(사탕)",
+  "version": "1.0.0",
+  "description": "동글 · 아주 둥글고 납작한 글씨. 글자를 키우고 모서리를 굴려 통째로 다른 화면.",
+  "css": "theme.css",
+  "snippets": [],
+  "supportsDark": true,
+  "author": "Dotorix",
+  "fonts": [
+    "dongle"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "gaegu-gongchaek",
+  "name": "개구(공책)",
+  "version": "1.0.0",
+  "description": "개구 · 손글씨체. 시각까지 같은 글씨라 화면 전체가 한 사람이 쓴 공책이 된다.",
+  "css": "theme.css",
+  "snippets": [],
+  "supportsDark": true,
+  "author": "Dotorix",
+  "fonts": [
+    "gaegu"
+  ]
+}

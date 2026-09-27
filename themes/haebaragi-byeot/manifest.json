@@ -1,0 +1,13 @@
+{
+  "id": "haebaragi-byeot",
+  "name": "해바라기(볕)",
+  "version": "1.0.0",
+  "description": "해바라기 · 얇은 획을 본문에 쓰는 드문 선택. 미색 바탕에 겨자색 하나.",
+  "css": "theme.css",
+  "snippets": [],
+  "supportsDark": true,
+  "author": "Dotorix",
+  "fonts": [
+    "sunflower"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "plex-cheongsajin",
+  "name": "플렉스(청사진)",
+  "version": "1.0.0",
+  "description": "IBM Plex Sans KR · 도면처럼 반듯하다. 옅은 격자 위에 실선 카드, 자로 잰 시각.",
+  "css": "theme.css",
+  "snippets": [],
+  "supportsDark": true,
+  "author": "Dotorix",
+  "fonts": [
+    "ibm-plex-mono",
+    "ibm-plex-sans-kr"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "bonmyeongjo-seogo",
+  "name": "본명조(서고)",
+  "version": "1.0.0",
+  "description": "본명조 · 본문까지 명조. 긴 글을 오래 읽는 사람을 위한 줄간과 여백.",
+  "css": "theme.css",
+  "snippets": [],
+  "supportsDark": true,
+  "author": "Dotorix",
+  "fonts": [
+    "noto-serif-kr"
+  ]
+}

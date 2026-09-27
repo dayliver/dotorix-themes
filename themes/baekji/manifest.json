@@ -1,0 +1,14 @@
+{
+  "id": "baekji",
+  "name": "함렛(백지)",
+  "version": "1.1.0",
+  "description": "함렛 · 순백에 먹빛. 색 없이 두께만으로 위계를 세운 첫 서체 테마.",
+  "css": "theme.css",
+  "snippets": [],
+  "supportsDark": true,
+  "author": "Dotorix",
+  "fonts": [
+    "hahmlet",
+    "ibm-plex-mono"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "gothic-jjokbit",
+  "name": "고딕(쪽빛)",
+  "version": "1.0.0",
+  "description": "고딕 A1 · 백묵과 같은 뼈대에 남색 하나. 색이 한 점 들어오면 무엇이 달라지는지.",
+  "css": "theme.css",
+  "snippets": [],
+  "supportsDark": true,
+  "author": "Dotorix",
+  "fonts": [
+    "gothic-a1"
+  ]
+}

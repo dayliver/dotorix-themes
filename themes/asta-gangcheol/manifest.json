@@ -1,0 +1,13 @@
+{
+  "id": "asta-gangcheol",
+  "name": "아스타(강철)",
+  "version": "1.0.0",
+  "description": "아스타 산스 · 완전한 무채색. 채운 카드와 둥근 모서리만으로 만드는 도구의 중립.",
+  "css": "theme.css",
+  "snippets": [],
+  "supportsDark": true,
+  "author": "Dotorix",
+  "fonts": [
+    "asta-sans"
+  ]
+}

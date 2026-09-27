@@ -1,0 +1,13 @@
+{
+  "id": "gothic-baekmuk",
+  "name": "고딕(백묵)",
+  "version": "1.0.0",
+  "description": "고딕 A1 · 순백에 먹빛. 색을 쓰지 않고 아홉 두께로만 위계를 세운다.",
+  "css": "theme.css",
+  "snippets": [],
+  "supportsDark": true,
+  "author": "Dotorix",
+  "fonts": [
+    "gothic-a1"
+  ]
+}

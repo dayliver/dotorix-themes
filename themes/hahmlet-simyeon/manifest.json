@@ -1,0 +1,13 @@
+{
+  "id": "hahmlet-simyeon",
+  "name": "함렛(심연)",
+  "version": "1.0.0",
+  "description": "함렛 · 검은 바탕의 고대비 명조. 본문은 얇게 깔고 날짜만 900으로 세운다.",
+  "css": "theme.css",
+  "snippets": [],
+  "supportsDark": true,
+  "author": "Dotorix",
+  "fonts": [
+    "hahmlet"
+  ]
+}

@@ -1,0 +1,489 @@
+/**
+ * Dotorix — 본명조(서고)
+ *
+ * 서체: 본명조
+ * 본문까지 명조. 긴 글을 오래 읽는 사람을 위한 줄간과 여백.
+ *
+ * 이 파일은 생성기 산출물이다(/tmp/dotorix-work/gen3). modern 의 190토큰을
+ * 빠짐없이 채우고, 아래 11절에서 이 테마만의 규칙을 더한다.
+ */
+
+/* ━━━ 1. 서체 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+:root {
+  --font-sans:    'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, sans-serif;
+  --font-heading: 'Noto Serif KR', 'Apple SD Gothic Neo', sans-serif;
+  --font-mono:    'Noto Serif KR', ui-monospace, 'SF Mono', Consolas, monospace;
+
+  --heading-weight: 700;
+  --body-weight:    400;
+
+  --link-underline-thickness: 1px;
+  --link-underline-offset:    0.14em;
+
+  --link-wiki-color:                  var(--primary);
+  --link-wiki-weight:                 600;
+  --link-wiki-font:                   var(--font-sans);
+  --link-wiki-unresolved-color:       var(--muted-foreground);
+  --link-wiki-unresolved-style:       normal;
+  --link-external-color:              var(--foreground);
+  --link-external-color-hover:        var(--primary);
+  --link-external-decoration-color:   var(--primary);
+  --link-external-decoration-style:   solid;
+  --link-internal-color:              var(--primary);
+
+  --timeline-time-font:        var(--font-mono);
+  --tracked-item-title-font:   var(--font-heading);
+  --document-item-title-font:  var(--font-heading);
+}
+
+/* ━━━ 2. 색 — 라이트 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+:root {
+  --background:            #fdfbf6;
+  --foreground:            #26221a;
+
+  --card:                  #fffdf8;
+  --card-foreground:       #26221a;
+  --popover:               #fffdf8;
+  --popover-foreground:    #26221a;
+
+  --primary:               #7a5a2e;
+  --primary-foreground:    #ffffff;
+  --secondary:             color-mix(in oklab, #7a5a2e 12%, #fdfbf6);
+  --secondary-foreground:  #634923;
+
+  --muted:                 #f4efe3;
+  --muted-foreground:      #a09884;
+  --accent:                #f2ece0;
+  --accent-foreground:     #26221a;
+  --destructive:           #a3402f;
+
+  --border:                #eae3d4;
+  --input:                 #eae3d4;
+  --ring:                  #7a5a2e;
+  --radius:                0.25rem;
+
+  --scrollbar-thumb-opacity:       22%;
+  --scrollbar-thumb-hover-opacity: 45%;
+
+  --chart-1:               #7a5a2e;
+  --chart-2:               #a8762c;
+  --chart-3:               #5d7052;
+  --chart-4:               #a58a3c;
+  --chart-5:               #7d5c74;
+
+  --sidebar:               #f9f5ec;
+  --sidebar-foreground:    #26221a;
+  --sidebar-primary:       #7a5a2e;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent:        #f0e9db;
+  --sidebar-accent-foreground:  #26221a;
+  --sidebar-border:        #e7dfce;
+  --sidebar-ring:          #7a5a2e;
+}
+
+/* ━━━ 3. 색 — 다크 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.dark {
+  --background:            #1e1b15;
+  --foreground:            #e9e3d5;
+
+  --card:                  #26221b;
+  --card-foreground:       #e9e3d5;
+  --popover:               #26221b;
+  --popover-foreground:    #e9e3d5;
+
+  --primary:               #c99f66;
+  --primary-foreground:    #1e1b15;
+  --secondary:             color-mix(in oklab, #c99f66 12%, #1e1b15);
+  --secondary-foreground:  #dcb87f;
+
+  --muted:                 #2a2620;
+  --muted-foreground:      #98907e;
+  --accent:                #2a2620;
+  --accent-foreground:     #e9e3d5;
+  --destructive:           #d97b6c;
+
+  --border:                #38332a;
+  --input:                 #38332a;
+  --ring:                  #c99f66;
+  --radius:                0.25rem;
+
+  --scrollbar-thumb-opacity:       22%;
+  --scrollbar-thumb-hover-opacity: 45%;
+
+  --chart-1:               #c99f66;
+  --chart-2:               #d8a355;
+  --chart-3:               #8ba37c;
+  --chart-4:               #c2ab63;
+  --chart-5:               #a98a9f;
+
+  --sidebar:               #231f19;
+  --sidebar-foreground:    #e9e3d5;
+  --sidebar-primary:       #c99f66;
+  --sidebar-primary-foreground: #1e1b15;
+  --sidebar-accent:        #2d2820;
+  --sidebar-accent-foreground:  #e9e3d5;
+  --sidebar-border:        #38332a;
+  --sidebar-ring:          #c99f66;
+}
+
+/* ━━━ 4. 레이아웃 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+:root {
+  --left-panel-width:    25%;
+  --right-panel-width:   25%;
+  --tab-bar-height:      2.625rem;
+  --focus-header-height: 3rem;
+  --panel-padding:       1rem;
+  --panel-widget-gap:    1.25rem;
+  --panel-row-padding:   0.4375rem 0.6875rem;
+  --panel-row-hover-bg:  color-mix(in oklab, var(--sidebar-foreground) 7%, transparent);
+}
+
+/* ━━━ 5. 탭 바 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+:root {
+  --tab-font-size:           0.8125rem;
+  --tab-padding-inline:      0.875rem;
+  --tab-min-width:           3.5rem;
+  --tab-max-width:           12rem;
+  --tab-home-min-width:      2.75rem;
+  --tab-home-padding-inline: 0.6875rem;
+  --tab-hover-bg:            color-mix(in oklab, var(--foreground) 7%, transparent);
+  --tab-overflow-max-height: 16rem;
+}
+
+/* ━━━ 6. 옴니바 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+:root {
+  --omnibar-bg:              var(--card);
+  --omnibar-border:          var(--border);
+  --omnibar-backdrop-blur:   blur(12px);
+  --omnibar-dock-padding:    0.5rem 1rem;
+  --omnibar-min-height:      2.375rem;
+  --omnibar-inline-radius:   0.625rem;
+  --omnibar-submit-size:     2.25rem;
+  --omnibar-dropdown-max-height: 18rem;
+}
+
+/* ━━━ 7. 위젯 크롬 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+:root {
+  --widget-bg:             transparent;
+  --widget-border:         transparent;
+  --widget-shadow:         none;
+  --widget-padding:        1rem;
+  --widget-head-gap:       0.625rem;
+  --widget-head-padding:   1rem 1rem 0;
+  --widget-icon-size:      1rem;
+
+  --widget-title-color:    var(--primary);
+  --widget-title-icon-color: var(--primary);
+  --widget-title-size:     0.8125rem;
+  --widget-title-weight:   700;
+  --widget-title-tracking: 0;
+
+  --widget-calendar-today-ring:  var(--primary);
+  --widget-calendar-journal-dot: var(--primary);
+  --widget-calendar-due-dot:     var(--chart-2);
+
+  --widget-task-meta-color:  var(--muted-foreground);
+  --widget-event-dot:        var(--chart-2);
+
+  --widget-tag-gap:          0.375rem;
+  --widget-tag-pill-bg:      transparent;
+  --widget-tag-pill-color:   var(--secondary-foreground);
+  --widget-tag-pill-radius:  0;
+  --widget-tag-pill-border-color: transparent;
+  --widget-tag-pill-count-color:  var(--muted-foreground);
+  --widget-tag-pill-hover-bg:     color-mix(in oklab, var(--primary) 20%, transparent);
+
+  --widget-recent-meta-color: var(--muted-foreground);
+  --widget-meta-link-size:    0.6875rem;
+
+  --tag-highlight-color:       var(--secondary-foreground);
+  --tag-highlight-bg:          transparent;
+  --tag-highlight-padding:     0.05em 0.35em;
+  --tag-highlight-radius:      0;
+  --tag-highlight-font-size:   0.875em;
+
+  --task-tag-badge-bg:         transparent;
+  --task-tag-badge-color:      var(--secondary-foreground);
+  --task-tag-badge-padding:    0.125rem 0.4375rem;
+  --task-tag-badge-font-size:  0.6875rem;
+  --task-meta-badge-bg:        color-mix(in oklab, var(--foreground) 7%, transparent);
+  --task-meta-badge-color:     var(--muted-foreground);
+  --task-meta-badge-padding:   0.125rem 0.4375rem;
+  --task-meta-badge-font-size: 0.6875rem;
+
+  --tag-cloud-pill-gap:       0.3125rem;
+  --tag-cloud-pill-padding:   0.05em 0.35em;
+  --tag-cloud-pill-font-size: 0.75rem;
+
+  --tag-heatmap-cell-size:      11px;
+  --tag-heatmap-cell-radius:    3px;
+  --tag-heatmap-cell-bg:        color-mix(in oklab, var(--muted-foreground) 16%, transparent);
+  --tag-heatmap-cell-active-bg: color-mix(in oklab, var(--primary) 75%, var(--background));
+
+  --sidebar-nav-item-padding:       0.4375rem 0.6875rem;
+  --sidebar-nav-item-radius:        0.375rem;
+  --sidebar-nav-item-color:         var(--sidebar-foreground);
+  --sidebar-nav-item-hover-bg:      color-mix(in oklab, var(--sidebar-foreground) 7%, transparent);
+  --sidebar-nav-item-hover-color:   var(--sidebar-foreground);
+  --sidebar-nav-item-active-bg:     color-mix(in oklab, var(--sidebar-foreground) 11%, transparent);
+  --sidebar-nav-item-active-color:  var(--sidebar-foreground);
+  --sidebar-nav-item-active-weight: 700;
+
+  --document-links-heading-font-size: 0.8125rem;
+  --document-links-item-font-size:    0.875rem;
+  --document-links-item-padding:      0.375rem 0.5rem;
+  --document-links-item-radius:       0.375rem;
+}
+
+/* ━━━ 8. 타임라인 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+:root {
+  --timeline-group-pb:            3.25rem;
+  --timeline-day-label-color:     var(--primary);
+  --timeline-day-label-tracking:  -0.02em;
+  --timeline-day-label-font-size: 1rem;
+  --timeline-day-rule-color:      color-mix(in oklab, var(--foreground) 20%, transparent);
+
+  --timeline-time-color:     var(--muted-foreground);
+  --timeline-time-font-size: 0.71875rem;
+
+  --timeline-track-color:    color-mix(in oklab, var(--border) 70%, transparent);
+  --timeline-track-indent:   1.5rem;
+  --timeline-fragment-gap:   0.875rem;
+  --timeline-dot-size:       0.3125rem;
+  --timeline-dot-bg:         color-mix(in oklab, var(--muted-foreground) 35%, transparent);
+  --timeline-dot-hover-bg:   var(--primary);
+
+  --timeline-card-bg:           transparent;
+  --timeline-card-border:       transparent;
+  --timeline-card-shadow:       none;
+  --timeline-card-shadow-hover: none;
+  --timeline-card-padding:      0.5625rem 0.6875rem;
+  --timeline-card-radius:       0.25rem;
+  --timeline-card-hover-bg:     var(--accent);
+  --timeline-card-hover-border: transparent;
+
+  --fragment-footer-border: none;
+  --fragment-footer-margin-top: 0.4375rem;
+  --fragment-footer-padding-top: 0;
+
+  --event-accent-width: 0;
+  --task-accent-width: 0;
+
+  --timeline-image-max-height: 320px;
+}
+
+/* ━━━ 9. 문서 본문 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+:root {
+  --document-max-width:    720px;
+  --document-padding:      2rem 2.5rem 4.5rem;
+
+  --prose-font-size:       1rem;
+  --prose-fragment-font-size: 0.9375rem;
+  --prose-line-height:     1.85;
+  --prose-block-margin-bottom: 1rem;
+
+  --prose-code-font-size:  0.875rem;
+  --prose-code-line-height: 1.6;
+  --prose-table-cell-padding: 6px 13px;
+
+  --md-theme-color:              var(--foreground);
+  --md-theme-border-color:       var(--border);
+  --md-theme-link-color:         var(--primary);
+  --md-theme-link-hover-color:   var(--primary);
+  --md-theme-quote-color:        var(--muted-foreground);
+  --md-theme-quote-border:       0.25em solid color-mix(in oklab, var(--primary) 40%, transparent);
+  --md-theme-code-inline-color:  inherit;
+  --md-theme-code-inline-bg-color: var(--muted);
+  --md-theme-code-inline-radius: 0.375rem;
+  --md-theme-code-block-color:   var(--foreground);
+  --md-theme-code-block-bg-color: var(--muted);
+  --md-theme-code-block-radius:  0.375rem;
+  --md-theme-table-stripe-color: var(--muted);
+  --md-theme-table-tr-bg-color:  var(--card);
+  --md-theme-table-td-border-color: var(--border);
+}
+
+/* ━━━ 10. 툴바 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+:root {
+  --toolbar-bg:       color-mix(in oklab, var(--background) 92%, transparent);
+  --toolbar-padding:  0.5rem 0.75rem;
+  --mode-toggle-padding: 0.1875rem;
+}
+
+/* ━━━ 11. 이 테마의 규칙 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-region='left-panel'],
+[data-region='right-panel'] {
+  background: var(--sidebar);
+  color: var(--sidebar-foreground);
+}
+
+[data-region='left-panel'] {
+  width: var(--left-panel-width);
+  flex-basis: var(--left-panel-width);
+  border-right: 1px solid var(--sidebar-border);
+}
+
+[data-region='right-panel'] {
+  width: var(--right-panel-width);
+  flex-basis: var(--right-panel-width);
+  border-left: 1px solid var(--sidebar-border);
+}
+
+[data-region='app-titlebar'] {
+  height: var(--tab-bar-height);
+  background: var(--sidebar);
+  border-bottom: 1px solid var(--sidebar-border);
+}
+
+[data-region='omnibar-header'] {
+  background: color-mix(in oklab, var(--background) 94%, transparent);
+  border-bottom-color: transparent;
+}
+
+[data-region='omnibar'] {
+  --omnibar-bg: var(--card);
+  --omnibar-border: var(--border);
+}
+
+[data-region='omnibar'].omnibar--dock {
+  background: color-mix(in oklab, var(--card) 88%, transparent);
+  backdrop-filter: var(--omnibar-backdrop-blur);
+}
+
+.panel-row {
+  padding: var(--panel-row-padding);
+  border-radius: 0.375rem;
+  transition: background-color 0.1s ease;
+}
+
+.panel-widget__frame {
+  box-shadow: var(--widget-shadow);
+  border-radius: var(--radius);
+}
+
+.panel-widget__head [data-lucide],
+.panel-widget__head svg {
+  color: var(--widget-title-icon-color);
+}
+
+/* 태그는 채우지 않고 밑줄로 — 명조 화면에 알약은 시끄럽다 */
+[data-widget='tags'] .tag-cloud-pill,
+.tag-highlight {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in oklab, var(--primary) 45%, transparent);
+}
+
+[data-widget='tasks'] .task-due,
+[data-widget='tasks'] [class*='text-muted-foreground'],
+[data-widget='plan'] .task-due,
+[data-widget='plan'] [class*='text-muted-foreground'] {
+  color: var(--widget-task-meta-color);
+}
+
+[data-widget='events'] [class*='bg-chart-2'],
+[data-widget='plan'] [class*='bg-chart-2'] {
+  background-color: var(--widget-event-dot);
+}
+
+[data-widget='tags'] .flex {
+  gap: var(--widget-tag-gap);
+}
+
+[data-widget='tags'] .tag-cloud-pill {
+  background: var(--widget-tag-pill-bg);
+  color: var(--widget-tag-pill-color);
+  border-radius: var(--widget-tag-pill-radius);
+  border: 1px solid var(--widget-tag-pill-border-color);
+  transition: background-color 0.1s ease;
+}
+
+[data-widget='tags'] .tag-cloud-pill:hover {
+  background: var(--widget-tag-pill-hover-bg);
+}
+
+[data-widget='recent'] [class*='text-muted-foreground'] {
+  color: var(--widget-recent-meta-color);
+}
+
+.timeline-day-header {
+  margin-bottom: 1.125rem;
+}
+
+.timeline-day-label {
+  font-family: var(--font-heading);
+  letter-spacing: var(--timeline-day-label-tracking);
+  color: var(--timeline-day-label-color);
+  font-size: var(--timeline-day-label-font-size);
+  font-weight: var(--heading-weight);
+  line-height: 1.25;
+}
+
+.timeline-day-rule { background: linear-gradient(to right, var(--timeline-day-rule-color), transparent); opacity: 1; }
+
+.timeline-track {
+  padding-left: var(--timeline-track-indent);
+  border-color: var(--timeline-track-color);
+}
+
+.timeline-dot {
+  width: var(--timeline-dot-size);
+  height: var(--timeline-dot-size);
+  background-color: var(--timeline-dot-bg);
+  left: calc(-1 * (var(--timeline-track-indent) + var(--timeline-dot-size) / 2));
+  transition: background-color 0.12s ease, transform 0.12s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  background-color: var(--timeline-dot-hover-bg);
+  transform: scale(1.3);
+}
+
+.timeline-time {
+  font-family: var(--timeline-time-font);
+  color: var(--timeline-time-color);
+  font-size: var(--timeline-time-font-size);
+}
+
+.timeline-fragment-card {
+  background-color: var(--timeline-card-bg);
+  border: 1px solid var(--timeline-card-border);
+  padding: var(--timeline-card-padding);
+  border-radius: var(--timeline-card-radius);
+  box-shadow: var(--timeline-card-shadow);
+  transition: background-color 0.1s ease, border-color 0.1s ease;
+  color: var(--foreground);
+}
+
+.timeline-fragment-card:hover,
+.timeline-fragment-card.fragment-card--menu-open {
+  background-color: var(--timeline-card-hover-bg);
+  border-color: var(--timeline-card-hover-border);
+}
+
+.journal-fragment-body {
+  font-size: var(--prose-fragment-font-size);
+  line-height: var(--prose-line-height);
+  color: var(--md-theme-color);
+}
+
+/* 명조 본문은 줄간이 넉넉해야 읽힌다 */
+.journal-fragment-body { letter-spacing: -0.005em; }
+/* 인용은 여백으로 — 명조에는 굵은 세로선이 어울리지 않는다 */
+.journal-fragment-body blockquote { border-left-width: 1px; }

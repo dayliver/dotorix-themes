@@ -1,0 +1,13 @@
+{
+  "id": "nanumgothic-sinmun",
+  "name": "나눔고딕(신문)",
+  "version": "1.0.0",
+  "description": "나눔고딕 · 각진 모서리와 얇은 구분선. 항목마다 줄을 그어 조판한 지면.",
+  "css": "theme.css",
+  "snippets": [],
+  "supportsDark": true,
+  "author": "Dotorix",
+  "fonts": [
+    "nanum-gothic"
+  ]
+}

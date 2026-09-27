@@ -1,0 +1,11 @@
+{
+  "id": "modern",
+  "name": "Modern",
+  "version": "1.0.0",
+  "description": "Clean, modern GNOME / libadwaita look — Adwaita blue accent, flat surfaces, GNOME color palette, all-sans typography.",
+  "css": "theme.css",
+  "snippets": [],
+  "supportsDark": true,
+  "author": "Dotorinote",
+  "fonts": []
+}

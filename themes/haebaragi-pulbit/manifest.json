@@ -1,0 +1,13 @@
+{
+  "id": "haebaragi-pulbit",
+  "name": "해바라기(풀빛)",
+  "version": "1.0.0",
+  "description": "해바라기 · 볕과 같은 뼈대에 초록 하나. 잎맥처럼 얇은 획이 그대로 살아 있다.",
+  "css": "theme.css",
+  "snippets": [],
+  "supportsDark": true,
+  "author": "Dotorix",
+  "fonts": [
+    "sunflower"
+  ]
+}
